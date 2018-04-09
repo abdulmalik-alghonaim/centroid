@@ -25,10 +25,15 @@ var init = function(){
 var calculateCentroid = function(points){
     //----------------------------------
     //  YOUR CODE
-    //----------------------------------    
-
-    // return centroid with the following format
-    // return {x:10, y:30};  
+    //---------------------------------- 
+    length = points.length ;  
+    x_sum = 0;
+    y_sum = 0;
+    points.forEach(point => {
+        x_sum += point.x;
+        y_sum += point.y; 
+    });
+     return {x:Math.floor(x_sum/length),y:Math.floor(y_sum/length)}   
 };
 
 
